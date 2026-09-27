@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juice Shop - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Login</h1>
+
+    <form id="loginForm" novalidate>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="you@example.com" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" />
+
+      <p id="error" class="error"></p>
+
+      <button type="submit">Log in</button>
+    </form>
+
+    <!-- server response gets dropped in here -->
+    <div id="result"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
