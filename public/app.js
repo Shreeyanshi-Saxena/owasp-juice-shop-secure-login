@@ -42,7 +42,7 @@ form.addEventListener("submit", async function (e) {
     const data = await res.json();
 
     if (data.ok) {
-      // NOTE: intentionally using innerHTML here so the XSS test in Part 3 works
+      // NOTE: intentionally using innerHTML here so the XSS test works
       resultBox.innerHTML =
         "<span style='color:green'>Welcome back, " + data.user + "</span>";
     } else {

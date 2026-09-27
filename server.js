@@ -1,8 +1,8 @@
-// Simple login backend for the CSR703 assignment.
-// Mimics the Juice Shop login flow so we can test SQLi / XSS on it.
+// Simple login backend that mimics the Juice Shop login flow so we can test
+// SQLi / XSS on it.
 //
 // NOTE: the /login route is written the "wrong" way on purpose (string
-// concatenation) so Part 3 has a real vulnerability to break. The /login-secure
+// concatenation) so there is a real vulnerability to break. The /login-secure
 // route below shows how it should actually be done (parameterized + bcrypt).
 
 const express = require("express");
@@ -100,7 +100,7 @@ app.post("/login-secure", (req, res) => {
   return res.json({ ok: false, message: "Invalid email or password." });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Login demo running at http://localhost:${PORT}`);
 });

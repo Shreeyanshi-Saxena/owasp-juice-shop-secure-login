@@ -1,8 +1,8 @@
-# OWASP Juice Shop – Secure Login Form (CSR703 HW2)
+# OWASP Juice Shop – Secure Login Form
 
 A small login page that mimics the OWASP Juice Shop login screen. It was built
-for the HW2 assignment to practice client-side and server-side validation, and
-then to test SQL Injection / XSS against it.
+to practice client-side and server-side validation, and then to test SQL
+Injection / XSS against it.
 
 ## What it does
 
@@ -15,7 +15,7 @@ then to test SQL Injection / XSS against it.
 - Two login routes:
   - `POST /login` – the version wired to the form. Written the insecure way on
     purpose (string-built SQL query + echoes input back) so it can be attacked
-    in Part 3.
+    for testing.
   - `POST /login-secure` – the fixed version. Uses a parameterized query and
     checks the password with **bcrypt**.
 
@@ -37,9 +37,9 @@ npm install
 npm start
 ```
 
-Then open <http://localhost:3000> in a browser and log in.
+Then open <http://localhost:8000> in a browser and log in.
 
-(If port 3000 is busy you can run `PORT=4000 npm start` and use that port.)
+(If port 8000 is busy you can run `PORT=4000 npm start` and use that port instead.)
 
 ## Files
 
@@ -50,6 +50,6 @@ Then open <http://localhost:3000> in a browser and log in.
 
 ## Note
 
-The `/login` route is intentionally vulnerable for the assignment. Don't reuse
+The `/login` route is intentionally vulnerable for testing/learning. Don't reuse
 this code as-is in a real project — use the `/login-secure` route's approach
 (parameterized queries + bcrypt + escaping output) instead.
